@@ -6,9 +6,12 @@ import tablet from "@/assets/home/background-home-tablet.jpg";
 import desktop from "@/assets/home/background-home-desktop.jpg";
 import Background from "@/components/Background";
 import { motion } from "framer-motion";
-import { SLIDE_LEFT } from "@/lib/data";
+import { SCALE_UP, SLIDE_LEFT } from "@/lib/data";
+import { useRouter } from "next/navigation";
 
 export default function Home() {
+  const router = useRouter();
+
   return (
     <MotionDiv>
       <Background
@@ -33,6 +36,10 @@ export default function Home() {
         </motion.div>
 
         <motion.div
+          onClick={() => {
+            router.push("/destination");
+          }}
+          variants={SCALE_UP}
           className="bg-white w-48 h-48 rounded-full flex items-center justify-center font-primary tracking-[1.25px] uppercase relative group md:w-60 md:h-60
           lg:w-72 lg:h-72"
         >
