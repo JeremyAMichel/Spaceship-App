@@ -6,7 +6,7 @@ import Navbar from "@/components/Navbar";
 const bellefair = Bellefair({
   subsets : ["latin"],
   weight : "400",
-  variable : "--bellefaire-font"
+  variable : "--bellefair-font"
 })
 
 const barlow = Barlow_Condensed({

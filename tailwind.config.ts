@@ -20,8 +20,8 @@ module.exports = {
       },
 
       fontFamily: {
-        primary: [" var(--barlow-font)"],
-        secondary: [" var(--bellefair-font)"],
+        primary: ["var(--barlow-font)"],
+        secondary: ["var(--bellefair-font)"],
       },
     },
   },
