@@ -7,6 +7,7 @@ import openIcon from "@/assets/shared/icon-hamburger.svg";
 import closeIcon from "@/assets/shared/icon-close.svg";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 const pages = [
   {
@@ -94,6 +95,9 @@ function Navbar() {
                 <span className="block font-bold min-w-[20px]">
                   {item.title}
                 </span>
+                {
+                  isActive(item.href) && <motion.span layoutId="underline" className="absolute bottom-0 right-0 h-full w-1 md:w-full md:h-1 bg-white" />
+                }
               </li>
             </Link>
           );
